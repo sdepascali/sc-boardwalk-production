@@ -5,7 +5,7 @@ pragma solidity ^0.4.11;
 import './IMiniMeToken.sol';
 import './IHashtag.sol';
 import './DealForTwoEnumerable.sol';
-import '../installed_contracts/zeppelin/contracts/ownership/Ownable.sol';
+import './Ownable.sol';
 
 contract DealForTwo is DealForTwoEnumerable,Ownable {
 	DealStatuses public status;

@@ -1,7 +1,6 @@
 pragma solidity ^0.4.8;
 
-import '../installed_contracts/zeppelin/contracts/ownership/Ownable.sol';
-//import '../installed_contracts/zeppelin/contracts/SafeMath.sol';
+import './Ownable.sol';
 import './IHashtag.sol';
 import './IMiniMeToken.sol';
 

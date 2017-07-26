@@ -2,7 +2,7 @@ require('babel-register');
 require('babel-polyfill');
 var HDWalletProvider = require("truffle-hdwallet-provider");
 
-var mnemonic = "";
+var mnemonic = "swarmcity swarmcity swarmcity swarmcity swarmcity swarmcity swarmcity swarmcity swarmcity swarmcity swarmcity swarmcity";
 var provider = new HDWalletProvider(mnemonic, "http://192.168.1.4:8545/");
 
 module.exports = {

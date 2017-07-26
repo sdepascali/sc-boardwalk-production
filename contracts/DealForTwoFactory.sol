@@ -2,7 +2,7 @@ pragma solidity ^0.4.11;
 
 import './IMiniMeToken.sol';
 import './IHashtag.sol';
-import '../installed_contracts/zeppelin/contracts/ownership/Ownable.sol';
+import './Ownable.sol';
 import './DealForTwoEnumerable.sol';
 
 contract DealForTwoFactory is DealForTwoEnumerable {

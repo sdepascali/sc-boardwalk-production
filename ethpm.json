@@ -1,6 +1,6 @@
 {
   "package_name": "swarmcity",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Swarm City",
   "authors": [
     "sponnet",
@@ -16,8 +16,5 @@
   "keywords": [
     "SwarmCity"
   ],
-  "dependencies": {
-    "zeppelin": "^1.0.4"
-  },
   "license": "MIT"
 }
