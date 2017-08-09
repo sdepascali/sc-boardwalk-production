@@ -16,7 +16,9 @@
     "src/pages/page-view404.html",
     "src/pages/page-stop-signup.html",
     "src/pages/page-password-warning.html",
-    "src/pages/page-choose-password.html"
+    "src/pages/page-choose-password.html",
+    "src/pages/page-account-complete.html",
+    "src/pages/page-make-backup.html"
   ],
   "sources": [
     "src/**/*",
@@ -35,16 +37,19 @@
     {
       "preset": "es5-bundled",
       "basePath": true,
+      "addServiceWorker": false,
       "bundle": {"excludes": ["swarm-city.min.js"]}
     },
     {
       "preset": "es6-bundled",
       "basePath": true,
+      "addServiceWorker": false,
       "bundle": {"excludes": ["swarm-city.min.js"]}
     },
     {
       "preset": "es6-unbundled",
       "basePath": true,
+      "addServiceWorker": false,
       "bundle": {"excludes": ["swarm-city.min.js"]}
     }
   ],
