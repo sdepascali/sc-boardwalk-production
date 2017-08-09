@@ -33,18 +33,16 @@ RUN mkdir -p contracts/swarmcity/installed_contracts/zeppelin/contracts/ownershi
            contracts/swarmcity/installed_contracts/zeppelin/contracts/ownership/Ownable.sol
 
 COPY contracts ./contracts/
+
 RUN npm run compilecontracts
-
 RUN npm run copy
-
 COPY index.html ./
 COPY images ./images/
 COPY src ./src/
 
 RUN npm run browserify
-RUN npm build
-
 RUN polymer build
+RUN npm run copyjs
 COPY pm2.json ./
 COPY server.js ./
 
