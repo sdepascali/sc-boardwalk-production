@@ -37,20 +37,17 @@
     {
       "preset": "es5-bundled",
       "basePath": true,
-      "addServiceWorker": false,
-      "bundle": {"excludes": ["swarm-city.min.js"]}
+      "addServiceWorker": false
     },
     {
       "preset": "es6-bundled",
       "basePath": true,
-      "addServiceWorker": false,
-      "bundle": {"excludes": ["swarm-city.min.js"]}
+      "addServiceWorker": false
     },
     {
       "preset": "es6-unbundled",
       "basePath": true,
-      "addServiceWorker": false,
-      "bundle": {"excludes": ["swarm-city.min.js"]}
+      "addServiceWorker": false
     }
   ],
   "lint": {
