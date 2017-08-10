@@ -42,7 +42,11 @@ COPY src ./src/
 
 RUN npm run browserify
 RUN polymer build
-RUN npm run copyjs
+#RUN npm run copyjs
+RUN cp src/swarm-city.min.js build/es5-bundled/src && \
+    cp src/swarm-city.min.js build/es5-bundled/src/ && \
+    cp src/swarm-city.min.js build/es6-unbundled/src/
+
 COPY pm2.json ./
 COPY server.js ./
 
