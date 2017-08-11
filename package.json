@@ -64,7 +64,7 @@
     "test": "polymer test",
     "test:integration": "polymer build",
     "copy": "cpx \"build/contracts/*.json\" src/contracts/ && cpx \"contracts/*.json\" src/contracts/",
-    "copyjs": "cpx \"src/swarm-city.min.js\" build/es5-bundled/src/swarm-city.min.js && cpx \"src/swarm-city.min.js\" build/es5-bundled/src/swarm-city.min.js && cpx \"src/swarm-city.min.js\" build/es6-unbundled/src/swarm-city.min.js",
+    "copyjs": "cpx \"src/swarm-city.min.js\" build/es5-bundled/src/swarm-city.min.js && cpx \"src/swarm-city.min.js\" build/es6-bundled/src/swarm-city.min.js && cpx \"src/swarm-city.min.js\" build/es6-unbundled/src/swarm-city.min.js",
     "build": "polymer build",
     "deploy": "netlify deploy -p build/production",
     "getcontractlibs": "truffle install",
