@@ -2,6 +2,10 @@
   "apps": [{
     "name": "swarmcity-boardwalk-production",
     "script": "server.js",
-    "instances"  : 1
+    "exec_mode" : "cluster",
+    "instances"  : 2,
+    "env": {
+      "production": true
+    }
   }]
 }
