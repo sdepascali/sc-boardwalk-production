@@ -40,9 +40,12 @@ COPY index.html ./
 COPY images ./images/
 COPY src ./src/
 
+COPY service-worker.js ./
+COPY sw-precache-config.js ./
+
 COPY polymer.json ./
 
-RUN npm run browserify
+# RUN npm run browserify
 RUN polymer build
 
 #RUN cp src/redux-state.html build/es6-unbundled/src/

@@ -38,12 +38,14 @@ This code may only be used under the license found at https://github.com/swarmci
     <title>Swarm City</title>
     <link rel="manifest" href="/manifest.json">
     <script>
-      const baseUrl = document.querySelector('base').href;
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-          navigator.serviceWorker.register(baseUrl + 'service-worker.js');
-        });
-      }
+      window.Polymer = {rootPath: '/'};
+            if ('serviceWorker' in navigator) {
+              window.addEventListener('load', function() {
+                navigator.serviceWorker.register('service-worker.js', {
+                  scope: Polymer.rootPath,
+                });
+              });
+            }
 
       var touchStartY;
       window.addEventListener('touchstart', (event) => {

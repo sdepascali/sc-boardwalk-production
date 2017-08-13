@@ -22,25 +22,12 @@
   ],
   "sources": [
     "src/**/*",
-    "src/pages/**/*",
     "images/**/*",
     "bower.json"
   ],
   "extraDependencies": [
     "manifest.json",
-    "bower_components/app-localize-behavior/*.html",
-    "bower_components/app-route/*.html",
-    "bower_components/iron-flex-layout/*.html",
-    "bower_components/iron-media-query/*.html",
-    "bower_components/neon-animation/*.html",
-    "bower_components/paper-slider/*.html",
-    "bower_components/paper-input/*.html",
-    "bower_components/polymer/*",
-    "bower_components/polymer-redux/*.html",
-    "bower_components/webcomponentsjs/*.js",
-    "node_modules/redux/dist/redux.min.js",
-    "src/swarm-city.min.js",
-    "src/text-translations.json"
+    "bower_components/webcomponentsjs/*.js"
   ],
   "builds": [
     {
