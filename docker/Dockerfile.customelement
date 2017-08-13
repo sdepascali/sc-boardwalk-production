@@ -55,9 +55,12 @@ RUN polymer build
 #RUN cp src/shared-styles.html build/es6-unbundled/src/
 
 #RUN npm run copyjs
-#RUN cp src/swarm-city.min.js build/es5-bundled/src && \
-#    cp src/swarm-city.min.js build/es6-bundled/src/ && \
-#    cp src/swarm-city.min.js build/es6-unbundled/src/
+RUN rm build/base/src/swarm-city.min.js && \
+    rm build/es6-bundled/src/swarm-city.min.js && \
+    rm build/es6-unbundled/src/swarm-city.min.js && \
+    cp src/swarm-city.min.js build/base/src && \
+    cp src/swarm-city.min.js build/es6-bundled/src/ && \
+    cp src/swarm-city.min.js build/es6-unbundled/src/
 
 
 #RUN ln -s src/swarm-city.min.js build/es5-bundled/src/swarm-city.min.js && \

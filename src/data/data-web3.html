@@ -311,7 +311,7 @@ this.$.web3.hashtags()
             _loadAbi(contractName) {
                 return new Promise((resolve, reject) => {
                     const xobj = new XMLHttpRequest();
-                    const path = '../src/contracts/' + contractName + '.json';
+                    const path = '../base/src/contracts/' + contractName + '.json';
                     xobj.overrideMimeType('application/json');
                     xobj.open('GET', path, true);
                     xobj.onreadystatechange = () => {
@@ -334,7 +334,7 @@ this.$.web3.hashtags()
             _loadAddress(contractName) {
                 return new Promise((resolve, reject) => {
                     const xobj = new XMLHttpRequest();
-                    const path = '../src/contracts/index.json';
+                    const path = '../base/src/contracts/index.json';
                     xobj.overrideMimeType('application/json');
                     xobj.open('GET', path, true);
                     xobj.onreadystatechange = () => {
@@ -356,7 +356,7 @@ this.$.web3.hashtags()
             _loadProviders() {
                 return new Promise((resolve, reject) => {
                     const xobj = new XMLHttpRequest();
-                    const path = '../src/contracts/providers.json';
+                    const path = '../base/src/contracts/providers.json';
                     xobj.overrideMimeType('application/json');
                     xobj.open('GET', path, true);
                     xobj.onreadystatechange = () => {
