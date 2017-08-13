@@ -187,7 +187,7 @@ this.$.util.translationExists(language)
             // Load the translations.json file
             const xobj = new XMLHttpRequest();
             xobj.overrideMimeType('application/json');
-            xobj.open('GET', '../src/text-translations.json', true);
+            xobj.open('GET', '../base/src/text-translations.json', true);
             xobj.onreadystatechange = () => {
                 if (xobj.readyState == 4 && xobj.status == '200') {
                     // The file loaded
@@ -216,7 +216,7 @@ this.$.util.translationExists(language)
             // Load the translations.json file
             const xobj = new XMLHttpRequest();
             xobj.overrideMimeType('application/json');
-            xobj.open('GET', '../src/text-translations.json', true);
+            xobj.open('GET', '../base/src/text-translations.json', true);
             xobj.onreadystatechange = () => {
                 if (xobj.readyState == 4 && xobj.status == '200') {
                     // Parse the response

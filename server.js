@@ -8,9 +8,9 @@ app.use(helmet());
 
 app.get('/*', prpl.makeHandler('./build/', {
     builds: [
-        {name: 'es5-bundled', browserCapabilities: ['es2015']},
-        {name: 'es6-unbundled', browserCapabilities: ['push']},
-        {name: 'es6-bundled', browserCapabilities: []},
+        {name: 'es6-unbundled', browserCapabilities: ['es2015', 'push']},
+        {name: 'es6-bundled', browserCapabilities: ['es2015']},
+        {name: 'base', browserCapabilities: []},
     ],
 }));
 

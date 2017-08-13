@@ -31,6 +31,7 @@
   ],
   "builds": [
     {
+      "name": "base",
       "preset": "es5-bundled",
       "basePath": true
     },
