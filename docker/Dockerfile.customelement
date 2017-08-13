@@ -40,8 +40,8 @@ COPY index.html ./
 COPY images ./images/
 COPY src ./src/
 
-COPY service-worker.js ./
-COPY sw-precache-config.js ./
+#COPY service-worker.js ./
+#COPY sw-precache-config.js ./
 
 COPY service-worker.js ./
 
