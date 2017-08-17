@@ -40,18 +40,7 @@ COPY images ./images/
 COPY src ./src/
 
 COPY polymer.json ./
-RUN polymer build
 
-RUN rm build/base/src/swarm-city.min.js && \
-    rm build/es6-bundled/src/swarm-city.min.js && \
-    rm build/es6-unbundled/src/swarm-city.min.js && \
-    cp src/swarm-city.min.js build/base/src && \
-    cp src/swarm-city.min.js build/es6-bundled/src/ && \
-    cp src/swarm-city.min.js build/es6-unbundled/src/
+EXPOSE 8081
 
-COPY pm2.json ./
-COPY server.js ./
-
-EXPOSE 8080
-
-CMD [ "pm2-docker", "start", "pm2.json" ]
+CMD polymer serve -H 0.0.0.0

@@ -145,7 +145,8 @@ The following custom properties and mixins are available for styling:
     _complete(account) {
         Promise.all([
             this.$.ipfs.getHash(account.avatar, 'img'),
-            this.$.web3.getBalance(account.address, 'SWT'),
+            this.$.web3.getBalance(account.address, 'SWTToken'),
+            this.$.web3.getBalance(account.address, 'ARCToken'),
         ])
             .then((data) => {
                 this.avatar = data[0];

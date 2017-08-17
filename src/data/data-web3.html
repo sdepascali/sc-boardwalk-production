@@ -205,7 +205,7 @@ this.$.web3.hashtags()
             */
             getBalance(address, token) {
                 return new Promise((resolve, reject) => {
-                    resolve(24.349821);
+                    resolve(this._getBalance(address, token, 'main', 1));
                 });
             }
             /**
@@ -302,6 +302,42 @@ this.$.web3.hashtags()
                 });
             }
 
+            /**
+             * Get Balance.
+             * @param {String} address
+             * @param {int} network index
+             * @param {int} provider index
+             * @return {BigNumber} swtBalance amount of tokens held at address
+             */
+            _getBalance(address, contractName, network, provider) {
+                return new Promise((resolve, reject) => {
+                    Promise.all(
+                        [this._loadAbi(contractName),
+                            this._loadAddress(contractName),
+                            this._loadProviders()]
+                    ).then((data) => {
+                        // constructing contract from abi/address should happen globally
+                        const abiArray = data[0].abi;
+                        const contractAddress = data[1][contractName];
+                        const providers = data[2]['ropsten'];
+                        let web3 = new swarmCity.Web3();
+                        web3.setProvider(
+                            new web3.providers.HttpProvider(providers[provider]));
+                        let contract = web3.eth.contract(abiArray)
+                            .at(contractAddress);
+                        contract.getBalance(address, function(error, response) {
+                            if (error) {
+                                reject(error);
+                            } else {
+                                resolve(response);
+                            }
+                        });
+                    })
+                        .catch((err) => {
+                            reject(err);
+                        });
+                });
+            }
 
             /**
             * Returns the abi for the requests contract
